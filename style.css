@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 100%);
+  font-family: "Alata", sans-serif;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+  padding-bottom: 5px;
+  transition: 0.5s;
+}
+li:hover {
+  border-bottom: 2px solid white;
+}
+
+.container {
+  padding: 25px 20px;
+  background: url(./images/mobile/image-hero.jpg);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+.container .hero {
+  padding: 0;
+  margin: 0;
+}
+.container .hero nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .hero nav ul {
+  color: white;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  font-weight: 100;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  gap: 20px;
+}
+.container .hero nav .close {
+  display: none;
+  cursor: pointer;
+  z-index: 2;
+}
+.container .hero nav .burger {
+  cursor: pointer;
+  z-index: 2;
+}
+.container .hero nav .logo {
+  z-index: 2;
+  cursor: pointer;
+}
+.container .hero .heroText {
+  border: 2px solid white;
+  color: white;
+  width: 100%;
+  padding: 20px;
+  margin-top: 50%;
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+}
+.container .information {
+  margin-top: 360px;
+}
+.container .information img {
+  width: 100%;
+}
+.container .information .textWrapper {
+  text-align: center;
+}
+.container .information .textWrapper h1 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  padding-top: 40px;
+}
+.container .information .textWrapper p {
+  color: hsl(0deg, 0%, 41%);
+  padding-block: 20px;
+}
+.container .creations {
+  margin-top: 100px;
+  display: grid;
+  width: 100%;
+  gap: 20px;
+}
+.container .creations h1 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: hsl(0deg, 0%, 0%);
+}
+.container .creations .card {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.container .creations .card::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+}
+.container .creations .card:hover::before {
+  background: linear-gradient(to bottom, rgba(128, 128, 128, 0.715), rgba(128, 128, 128, 0.715));
+}
+.container .creations .card img {
+  width: 100%;
+}
+.container .creations .card .cardName {
+  color: hsl(0deg, 0%, 100%);
+  z-index: 2;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  transition: 0.5s;
+}
+.container .creations .card .cardName:hover {
+  color: black;
+}
+.container .creations button {
+  outline: none;
+  background-color: white;
+  border: 1px solid hsl(0deg, 0%, 0%);
+  color: hsl(0deg, 0%, 0%);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 10px 20px;
+  width: 50%;
+  font-family: "Alata", sans-serif;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.container .creations button:hover {
+  background-color: black;
+  color: white;
+}
+.container footer {
+  background-color: hsl(0deg, 0%, 0%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  padding: 50px;
+  gap: 30px;
+  text-align: center;
+  box-shadow: 0 0 0 20px black;
+  position: relative;
+}
+.container footer .attribution {
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 5px;
+}
+.container footer .attribution a {
+  font-weight: 700;
+  color: white;
+}
+.container footer .left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container footer .left .liContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container footer .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container footer .right .socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.container footer .right .socialIcons img {
+  cursor: pointer;
+}
+.container footer .right .socialIcons img:hover {
+  text-decoration: underline;
+}
+.container footer .right .copyRight {
+  color: hsl(0deg, 0%, 55%);
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    background-image: url(./images/desktop/image-hero.jpg);
+    padding: 50px 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .container .hero nav ul {
+    position: static;
+    background-color: transparent;
+    flex-direction: row;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: "Alata", sans-serif;
+    text-transform: capitalize;
+  }
+  .container .hero nav .burger {
+    display: none;
+  }
+  .container .hero .heroText {
+    border: 2px solid white;
+    margin-top: 15%;
+    width: 50%;
+  }
+  .container .information {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+  }
+  .container .information img {
+    width: 100%;
+  }
+  .container .information .textWrapper {
+    text-align: left;
+    height: 50%;
+    width: 60%;
+    margin-left: -10%;
+    background-color: white;
+    padding: 50px;
+  }
+  .container .creations {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .container .creations h1 {
+    grid-column: 1/4;
+    text-align: left;
+  }
+  .container .creations button {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+  }
+  .container footer {
+    box-shadow: 0 0 0 100px black;
+    margin-top: 300px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .container footer .left .liContainer {
+    flex-direction: row;
+  }
+  .container footer .left .logo {
+    width: 50%;
+  }
+  .container footer .right .socialIcons {
+    justify-content: flex-end;
+  }
+  .container footer .right .socialIcons img {
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+  }
+  .container footer .right .socialIcons img:hover {
+    border-bottom: 2px solid white;
+  }
+}/*# sourceMappingURL=style.css.map */

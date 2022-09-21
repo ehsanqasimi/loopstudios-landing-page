@@ -1,0 +1,352 @@
+@import './variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $White;
+    font-family: $alata;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+    padding-bottom: 5px;
+    transition: 0.5s;
+    &:hover{
+        border-bottom: 2px solid white;
+    }
+}
+
+
+
+.container {
+    padding: 25px 20px;
+    background: url(./images/mobile/image-hero.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+
+    .hero {
+        padding: 0;
+        margin: 0;
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            ul {
+                color: white;
+                background-color: black;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 30px;
+                font-weight: 100;
+                font-family: $josefin;
+                font-size: 2rem;
+                gap: 20px;
+            }
+
+            .close {
+                display: none;
+                cursor: pointer;
+                z-index: 2;
+            }
+
+            .burger {
+                cursor: pointer;
+                z-index: 2;
+            }
+
+            .logo {
+                z-index: 2;
+                cursor: pointer;
+            }
+        }
+
+        .heroText {
+            border: 2px solid white;
+            color: white;
+            width: 100%;
+            padding: 20px;
+            margin-top: 50%;
+            font-size: 3.2rem;
+            text-transform: uppercase;
+            font-family: $josefin;
+        }
+    }
+
+    .information {
+        margin-top: 360px;
+
+        img {
+            width: 100%;
+        }
+
+        .textWrapper {
+            text-align: center;
+
+            h1 {
+                font-family: $josefin;
+                text-transform: uppercase;
+                padding-top: 40px;
+            }
+
+            p {
+                color: $VeryDarkGray;
+                padding-block: 20px;
+            }
+        }
+    }
+
+    .creations {
+        margin-top: 100px;
+        display: grid;
+        width: 100%;
+        gap: 20px;
+
+        h1 {
+            font-family: $josefin;
+            text-transform: uppercase;
+            text-align: center;
+            color: $Black;
+        }
+
+        .card {
+            width: 100%;
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+            }
+
+            &:hover {
+                &::before {
+                    background: linear-gradient(to bottom, rgba(128, 128, 128, 0.715), rgba(128, 128, 128, 0.715));
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .cardName {
+                color: $White;
+                z-index: 2;
+                position: absolute;
+                bottom: 10%;
+                left: 5%;
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                font-family: $josefin;
+                font-weight: 300;
+                transition: 0.5s;
+                &:hover{
+                    color: black;
+                }
+            }
+        }
+
+        button {
+            outline: none;
+            background-color: white;
+            border: 1px solid $Black;
+            color: $Black;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding: 10px 20px;
+            width: 50%;
+            font-family: $alata;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover{
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+
+    footer {
+        background-color: $Black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        padding: 50px;
+        gap: 30px;
+        text-align: center;
+        box-shadow: 0 0 0 20px black;
+        position: relative;
+        .attribution {
+            color: white;
+            width: 100%;
+            text-align: center;
+            font-size: .8rem;
+            position: absolute;
+            bottom: 5px;
+            a {
+                font-weight: 700;
+                color: white;
+            }
+        }
+        .left {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .liContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .socialIcons {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                img{
+                    cursor: pointer;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .copyRight {
+                color: $DarkGray;
+            }
+        }
+    }
+}
+
+
+
+//styles for desktop
+@media screen and (min-width:800px) {
+    .container {
+        background-image: url(./images/desktop/image-hero.jpg);
+        padding: 50px 100px;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        .hero {
+            nav {
+                ul {
+                    position: static;
+                    background-color: transparent;
+                    flex-direction: row;
+                    height: fit-content;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 1.2rem;
+                    width: fit-content;
+                    font-family: $alata;
+                    text-transform: capitalize;
+                }
+
+                .burger {
+                    display: none;
+                }
+            }
+
+            .heroText {
+                border: 2px solid white;
+                margin-top: 15%;
+                width: 50%;
+
+            }
+        }
+
+        .information {
+            display: flex;
+            width: 100%;
+            align-items: flex-end;
+
+            img {
+                width: 100%;
+            }
+
+            .textWrapper {
+                text-align: left;
+                height: 50%;
+                width: 60%;
+                margin-left: -10%;
+                background-color: white;
+                padding: 50px;
+            }
+        }
+
+        .creations {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            h1 {
+                grid-column: 1/4;
+                text-align: left;
+            }
+
+            button {
+                grid-column-start: 4;
+                grid-column-end: 5;
+                grid-row-start: 1;
+            }
+        }
+
+        footer {
+            box-shadow: 0 0 0 100px black;
+            margin-top: 300px;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            .left {
+                .liContainer{
+                    flex-direction: row;
+                }
+                .logo{
+                    width: 50%;
+                }
+            }
+            .right{
+                .socialIcons{
+                    justify-content: flex-end;
+                    img{
+                        padding-bottom: 5px;
+                        border-bottom: 2px solid black;
+                        &:hover{
+                            border-bottom: 2px solid white;
+
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
